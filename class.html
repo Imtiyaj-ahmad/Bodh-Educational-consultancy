@@ -1,1 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main HTML File</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Function to load HTML content into an element
+            const loadHTML = async (url, elementId, scriptUrl) => {
+                try {
+                    const response = await fetch(url);
+                    if (response.ok) {
+                        const html = await response.text();
+                        document.getElementById(elementId).innerHTML = html;
+                        // Load the corresponding JavaScript file
+                        if (scriptUrl) {
+                            const script = document.createElement('script');
+                            script.src = scriptUrl;
+                            document.body.appendChild(script);
+                        }
+                    } else {
+                        console.error(`Error loading ${url}: ${response.statusText}`);
+                    }
+                } catch (error) {
+                    console.error(`Error fetching ${url}:`, error);
+                }
+            };
 
+            // Load sub-HTML files and their corresponding JavaScript files
+            loadHTML('navbar.html', 'navbar', 'navbarsript.js');
+        });
+    </script>
+    <link rel="stylesheet" href="classstyle.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+
+<body>
+        <div id="navbar"></div>
+<!--Feature-Container Start-->
+<div class="feature-container">
+    <div class="format">
+    <h1>All Class</h1>
+    <div class="feature-row">
+      <div class="box">
+        <img src="PTE.webp" alt="">
+        <h3>PTE-1</h3>
+        <p>PTE or Pearson Test of English is a computer-based test used for assessing the English language skills of an individual. This language test is accepted by education institutions worldwide, and is taken by students and working professionals who are planning to study or move to an English-speaking country. ........</p>
+        <button class="btn1">Continue Reading..</button>
+      </div>
+      <div class="box">
+        <img src="PTE.webp" alt="">
+        <h3>TOEFL</h3>
+        <p>TOEFL is one of the popular English language proficiency exams students take to study abroad. The TOEFL Writing Section is one of the four sections of the TOEFL Exam. While preparing for the TOEFL writing section, it is essential to know its format. This blog will provide knowledge about the types of ...........
+</p>
+        <button class="btn1">Continue Reading..</button>
+      </div>
+      <div class="box">
+        <img src="PTE.webp" alt="">
+        <h3>IELTS</h3>
+        <p>In IELTS, there are four sections: Listening, Reading, Writing, and Speaking. There are two different IELTS tests: Academic and General Training. The Speaking and Listening sections are the same in both tests, but the Reading and Writing sections are different Writing sections are different ...............</p>
+        <button class="btn1">Continue Reading..</button>
+      </div>
+    </div>
+  </div>
+<!--Feature container End-->
+
+
+  <!--Form Container start-->
+  <div class="form-container">
+    <h1>Get in touch</h1>
+    <h2>Please Drop your enquiry Here..</h2>
+    <h3>To start consultation and admission, kindly fill up the form , one of our advisers will contact you via email in less than 24 hours</h3>
+    <form action="#">
+        <div class="main-user-info">
+            <div class="user-input-box">
+                <label for="FullName">Full Name</label>
+                <input type="text" id="fullname" name="fullName" placeholder="Full Name">
+            </div>
+            <div class="user-input-box">
+                <label for="Mobile">Mobile Number</label>
+                <input type="text" id="mobile" name="mobile" placeholder="Mobile Number">
+            </div>
+            <div class="user-input-box">
+                <label for="email">Email ID</label>
+                <input type="text" id="email" name="email" placeholder="Email Id">
+            </div>
+            <div class="user-input-box">
+                <label for="Educational-level">Educational Level</label>
+                <select>
+                    <option value="Educational Level"></option>
+                    <option value="+2"></option>
+                    <option value="Bachelor"></option>
+                    <option value="Master"></option>
+                </select>
+            </div>
+                <div class="user-input-box">
+                    <label for="Courses">Courses</label>
+                    <select>
+                        <option value="Courses"></option>
+                        <option value="MBA in Australia"></option>
+                        <option value="Computer Science in Japan"></option>
+                        <option value="Bachelor of information management in Japan"></option>
+                    </select>
+                </div>
+                <div class="user-input-box">
+                    <label for="percentage">Percentage</label>
+                    <input type="text" id="percentage" name="percentage" placeholder="Percentage">
+                </div>
+                <div class="user-input-box">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" name="age" placeholder="Age">
+                </div>
+            </div>
+        </form>
+            <h3>Your preferred study destination</h3>
+        </div> 
+  </div>
+  <!--Form-container End-->
+  </body>
+  </html>
