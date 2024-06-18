@@ -1,1 +1,130 @@
+/* open feature and services container */
+.feature-container{
+    padding-top:150px;
+    background-color:whitesmoke;
+    text-align:center;
+    transition:0.5s;
+    padding-bottom:10px;
+  }
+  .feature-container h1{
+    padding-left:120px;
+    text-align:left;
+    color:#080c0b;
+  }
+  .feature-row{
+    padding-top:5px;
+    width:1000px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+  }
+  .box{
+    width:320px;
+    height:500px;
+    background:#fff;
+  }
+  .box img{
+    width:320px;
+    height:auto;
+  }
+  .box h3{
+    font-size: 25px;
+    padding-top: 5px;
+    color:black;
+  }
+  .box p{
+    color:grey;
+    padding-top:5px;
+    line-height:20px;
+  }
+  .box .btn1{
+    width:320px;
+    height:40px;
+    background:rgb(103, 148, 103);
+    border:none;
+    color:#fff;
+    font-size:17px;
+    cursor:pointer;
+    font-weight:bold;
+    margin-top:25px;
+  }
+  .box .btn1:hover{
+    background:#fff;
+    color:#2e937a;
+    border:1px solid #2e937a;
+  }
+  @media screen and (max-width:768px){
+    .feature-row{
+      padding-top:50px;
+      width:1000px;
+      margin:100px;
+      display:contents;
+      text-align: center;
+    }
+  }
+  /* close features and service container*/
 
+
+
+  /* Form open*/
+  .form-container{
+    padding-top:50px;
+    width:50%;
+    height:auto;
+
+  }
+
+  .form-container h1{
+    font-size:18px;
+    font-weight:600;
+    text-align:center;
+    padding-bottom: 10px;
+    color:black;
+  }
+  .form-container h2{
+    font-size:28px;
+    font-weight:600;
+    text-align:center;
+    padding-bottom: 10px;
+    color:black;
+  }
+
+  .form-container h3{
+    font-size:20px;
+    font-weight:600;
+    text-align:center;
+    padding-bottom: 10px;
+    color:black;
+  }
+.amin-user-info{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  padding:20px 0;
+}
+.user-input-box{
+  display:flex;
+  flex-wrap:wrap;
+  width:50%;
+  padding-bottom: 15px;
+}
+.user-input-box label{
+  width:95%;
+  color:black;
+  font-size: 20px;
+  font-weight:400;
+  margin:5px 0;
+}
+user-input-box input{
+  height:40px;
+  width:95%;
+  border-radius:7px;
+  outline:none;
+  border:1px solid black;
+  padding:10px;
+}
+
+
+
+  /* Form close */
+  
